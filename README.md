@@ -36,7 +36,8 @@ You need to initialize the front-end and configure all the files that need to be
 - `src-tauri/src/main.rs`
 - `prisma/schema.prisma`
 - `.github/workflows/test.yml` -- Unblock comments that prevent autorun action.
-- `.gitignore` -- Maybe you don’t want to push the build files to the repo
+- `.gitignore` -- Maybe you don’t want to push the build files to the repo.
+- `.github/renovate.json` -- Modify or delete it to suit your preferences.
 
 Here are some placeholders you should replace:
 
