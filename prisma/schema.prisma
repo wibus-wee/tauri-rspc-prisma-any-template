@@ -1,0 +1,11 @@
+generator client {
+  provider = "cargo prisma"
+  output   = "../core/src/prisma.rs"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:dev.db"
+}
+
+// Add you models here

@@ -1,0 +1,30 @@
+.output
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Tauri
+src-tauri/target
+target
+core/src/prisma.rs
+src/prisma.rs
+dev.db
+dev.db-journal

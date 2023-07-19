@@ -1,0 +1,43 @@
+{
+  "name": "<your_app_name>",
+  "version": "0.0.0",
+  "private": false,
+  "description": "<your_app_desc>",
+  "license": "Agpl-3.0",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm && npx simple-git-hooks",
+    "dev:web": "",
+    "build:web": "",
+    "generate:web": "",
+    "build:web:static": "",
+    "dev:tauri": "tauri dev",
+    "build:tauri": "tauri build",
+    "generate:prisma": "cargo prisma generate",
+    "preview:web": "",
+    "postinstall": "",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@prisma/client": "5.0.0",
+    "@rspc/client": "^0.1.3",
+    "@rspc/tauri": "^0.1.3",
+    "@tauri-apps/api": "^1.4.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.7",
+    "@tauri-apps/cli": "^1.4.0",
+    "@types/node": "^18.16.19",
+    "eslint": "^8.44.0",
+    "lint-staged": "^13.2.3",
+    "only-allow": "^1.1.1",
+    "prisma": "^5.0.0",
+    "simple-git-hooks": "^2.8.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
