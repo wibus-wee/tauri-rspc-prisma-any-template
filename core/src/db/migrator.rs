@@ -1,11 +1,11 @@
 use crate::{
     errors::CoreError,
     prisma::{new_client_with_url, PrismaClient},
-    utils::get_frpanel_dir,
+    utils::get_app_dir,
 };
 
 pub async fn new_client() -> Result<PrismaClient, CoreError> {
-    let frpanel_url = get_frpanel_dir().join("frpanel.db");
+    let frpanel_url = get_app_dir().join("frpanel.db");
 
     log::info!(
         "Connecting to frpanel database at {}",

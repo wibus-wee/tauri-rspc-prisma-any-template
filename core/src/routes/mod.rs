@@ -15,7 +15,7 @@ pub fn init_router() -> Arc<Router<Shared>> {
                     PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../src/bindings.d.ts"),
                 ),
         )
-        .merge("db.", db::mount()) <-- example
+        .merge("db.", db::mount()) // Mount the db routes
         .query("version", |t| {
             t(|_, _: ()| async move { env!("CARGO_PKG_VERSION") })
         })
